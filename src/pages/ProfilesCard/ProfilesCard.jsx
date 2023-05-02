@@ -1,0 +1,29 @@
+import React from "react";
+
+const ProfilesCard = ({ profile }) => {
+  console.log(profile);
+  return (
+    <div className="card w-124 glass m-2 rounded-lg shadow-lg shadow-zinc-800">
+      <figure>
+        <img src={profile.image} alt="Profile" />
+      </figure>
+
+      <div className="card-body">
+        <h2 className="card-title">Name: {profile.name}</h2>
+        <p>Experience: {profile.experience}</p>
+        <p>Best Recipes: {profile.recipes} items</p>
+
+        <div className="card-actions justify-end">
+          <button className="btn rounded gap-4">
+            Likes
+            <div className="badge badge-primary">{profile.likes}</div>
+          </button>
+
+          <button className="btn rounded">View Best Recipes</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProfilesCard;
