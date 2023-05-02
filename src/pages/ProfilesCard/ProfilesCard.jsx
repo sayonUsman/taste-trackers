@@ -1,7 +1,6 @@
 import React from "react";
 
 const ProfilesCard = ({ profile }) => {
-  console.log(profile);
   return (
     <div className="card w-124 glass m-2 rounded-lg shadow-lg shadow-zinc-800">
       <figure>

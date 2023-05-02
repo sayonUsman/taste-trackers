@@ -4,7 +4,7 @@ import header_image from "../../../assets/header_image.jpg";
 const Header = () => {
   return (
     <div>
-      <div class="bg-cover bg-center ">
+      <div className="bg-cover bg-center ">
         <img src={header_image} className="w-full max-h-screen"></img>
       </div>
 
