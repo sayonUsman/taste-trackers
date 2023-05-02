@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import SignUpPage from "../pages/SignUpPage/SignUpPage";
 import Foods from "../pages/Foods/Foods";
+import FoodCategories from "../pages/FoodCategories/FoodCategories";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,13 @@ const router = createBrowserRouter([
             element: <Foods></Foods>,
             loader: () =>
               fetch("https://www.themealdb.com/api/json/v1/1/categories.php"),
+            children: [
+              {
+                path: "/",
+                element: <FoodCategories></FoodCategories>,
+                loader: () => fetch("http://localhost:5000/foodCategories"),
+              },
+            ],
           },
         ],
       },
