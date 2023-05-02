@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../providers/ContextProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const [message, setMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleLogOut = () => {
+    setMessage("");
+    setErrorMessage("");
+
+    logOut()
+      .than(() => {
+        setMessage("Successfully logOut");
+      })
+      .catch((error) => {
+        setErrorMessage(error.message);
+      });
+  };
+
   return (
     <div>
       <div className="relative z-10">
@@ -25,27 +43,40 @@ const Navbar = () => {
                     />
                   </svg>
                 </label>
+
                 <ul
                   tabIndex={0}
                   className="menu menu-compact dropdown-content mt-3 p-2 shadow-md shadow-zinc-800 bg-base-100 rounded-md w-52"
                 >
                   <li>
-                    <Link to="/" className="btn-ghost">
+                    <Link to="/" className="btn-ghost mb-1">
                       Home
                     </Link>
                   </li>
 
                   <li>
-                    <Link to="/" className="btn-ghost">
+                    <Link to="/" className="btn-ghost mb-1">
                       Blog
                     </Link>
                   </li>
 
-                  <li>
-                    <Link to="/" className="btn-ghost">
-                      Login
-                    </Link>
-                  </li>
+                  {user ? (
+                    <li>
+                      <Link
+                        to="/login"
+                        onClick={handleLogOut}
+                        className="btn-ghost"
+                      >
+                        Log Out
+                      </Link>
+                    </li>
+                  ) : (
+                    <li>
+                      <Link to="/login" className="btn-ghost">
+                        Login
+                      </Link>
+                    </li>
+                  )}
                 </ul>
               </div>
 
@@ -57,58 +88,83 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
               <ul className="menu menu-horizontal px-1">
                 <li>
-                  <Link to="/" className="btn-ghost">
+                  <Link to="/" className="btn-ghost mr-1">
                     Home
                   </Link>
                 </li>
 
                 <li>
-                  <Link to="/" className="btn-ghost">
+                  <Link to="/" className="btn-ghost mr-1">
                     Blog
                   </Link>
                 </li>
 
-                <li>
-                  <Link to="/" className="btn-ghost">
-                    Login
-                  </Link>
-                </li>
+                {user ? (
+                  <li>
+                    <Link
+                      to="/login"
+                      onClick={handleLogOut}
+                      className="btn-ghost"
+                    >
+                      Log Out
+                    </Link>
+                  </li>
+                ) : (
+                  <li>
+                    <Link to="/login" className="btn-ghost">
+                      Login
+                    </Link>
+                  </li>
+                )}
               </ul>
             </div>
 
-            <div className="navbar-end">
-              <div className="dropdown dropdown-end">
-                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                  <div className="w-10 rounded-full">
-                    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                  </div>
-                </label>
+            {user && (
+              <div className="navbar-end">
+                <div className="dropdown dropdown-end">
+                  <label
+                    tabIndex={0}
+                    className="btn btn-ghost btn-circle avatar"
+                  >
+                    <div className="w-10 rounded-full">
+                      <img
+                        src={
+                          "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80"
+                        }
+                      />
+                    </div>
+                  </label>
 
-                <ul
-                  tabIndex={0}
-                  className="menu menu-compact dropdown-content mt-3 p-2 shadow-md shadow-zinc-800 bg-base-100 rounded-md w-52"
-                >
-                  <li>
-                    <Link to="/" className="justify-between btn-ghost">
-                      Profile
-                      <span className="badge">New</span>
-                    </Link>
-                  </li>
+                  <ul
+                    tabIndex={0}
+                    className="menu menu-compact dropdown-content mt-3 p-2 shadow-md shadow-zinc-800 bg-base-100 rounded-md w-52"
+                  >
+                    <li>
+                      <Link to="/" className="justify-between btn-ghost">
+                        Profile
+                        <span className="badge">New</span>
+                      </Link>
+                    </li>
 
-                  <li>
-                    <Link to="/" className="btn-ghost">
-                      Settings
-                    </Link>
-                  </li>
+                    <li>
+                      <Link to="/" className="btn-ghost">
+                        Settings
+                      </Link>
+                    </li>
 
-                  <li>
-                    <Link to="/" className="btn-ghost">
-                      Logout
-                    </Link>
-                  </li>
-                </ul>
+                    <li>
+                      <Link
+                        to="/login"
+                        onClick={handleLogOut}
+                        className="btn-ghost"
+                      >
+                        Log Out
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>
