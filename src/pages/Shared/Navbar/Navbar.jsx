@@ -30,15 +30,21 @@ const Navbar = () => {
                   className="menu menu-compact dropdown-content mt-3 p-2 shadow-md shadow-zinc-800 bg-base-100 rounded-md w-52"
                 >
                   <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/" className="btn-ghost">
+                      Home
+                    </Link>
                   </li>
 
                   <li>
-                    <Link to="/">Blog</Link>
+                    <Link to="/" className="btn-ghost">
+                      Blog
+                    </Link>
                   </li>
 
                   <li>
-                    <Link to="/">Login</Link>
+                    <Link to="/" className="btn-ghost">
+                      Login
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -51,15 +57,21 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
               <ul className="menu menu-horizontal px-1">
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/" className="btn-ghost">
+                    Home
+                  </Link>
                 </li>
 
                 <li>
-                  <Link to="/">Blog</Link>
+                  <Link to="/" className="btn-ghost">
+                    Blog
+                  </Link>
                 </li>
 
                 <li>
-                  <Link to="/">Login</Link>
+                  <Link to="/" className="btn-ghost">
+                    Login
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -77,17 +89,22 @@ const Navbar = () => {
                   className="menu menu-compact dropdown-content mt-3 p-2 shadow-md shadow-zinc-800 bg-base-100 rounded-md w-52"
                 >
                   <li>
-                    <Link to="/" className="justify-between">
+                    <Link to="/" className="justify-between btn-ghost">
                       Profile
                       <span className="badge">New</span>
                     </Link>
                   </li>
 
                   <li>
-                    <Link to="/">Settings</Link>
+                    <Link to="/" className="btn-ghost">
+                      Settings
+                    </Link>
                   </li>
+
                   <li>
-                    <Link to="/">Logout</Link>
+                    <Link to="/" className="btn-ghost">
+                      Logout
+                    </Link>
                   </li>
                 </ul>
               </div>
