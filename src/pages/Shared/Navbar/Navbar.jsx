@@ -21,7 +21,7 @@ const Navbar = () => {
   };
 
   return (
-    <div>
+    <div className="relative">
       <div className="relative z-10">
         <div className="fixed top-0 left-0 right-0 bg-white">
           <div className="navbar shadow-lg shadow-zinc-800">
