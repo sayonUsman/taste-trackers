@@ -1,9 +1,10 @@
 import React from "react";
+import { ImSpinner } from "react-icons/im";
 
 const LoaderPage = () => {
   return (
     <div className="hero min-h-screen">
-      <h2 className="text-info text-3xl lg:text-5xl font-bold">Loading...</h2>
+      <ImSpinner className="text-black h-20 w-40 animate-spin" />
     </div>
   );
 };
