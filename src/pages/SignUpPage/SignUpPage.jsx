@@ -76,143 +76,143 @@ const SignUpPage = () => {
   };
 
   return (
-    <div className="container mx-auto">
-      <div className="flex">
-        <div className="flex mx-auto mt-32 lg:mt-24 mb-5">
-          <div>
-            <div className="card rounded-lg w-96 bg-base-100 shadow-md shadow-zinc-800 p-5">
-              <h1 className="text-center text-2xl font-bold">Please Sign Up</h1>
+    <div className="hero min-h-screen">
+      <div>
+        <div className="card rounded-lg w-96 bg-base-100 shadow-md shadow-zinc-800 p-5">
+          <h1 className="text-center text-2xl font-bold">Please Sign Up</h1>
 
-              <form onSubmit={handleSubmit}>
-                <div className="form-control mt-10">
-                  <label className="input-group">
-                    <span>Email</span>
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      placeholder="info@site.com"
-                      className="input input-bordered"
-                      required
-                    />
-                  </label>
-                </div>
+          <form onSubmit={handleSubmit}>
+            <div className="form-control mt-5">
+              <label className="label">
+                <span className="label-text">User Name</span>
+              </label>
 
-                <div className="form-control mt-5">
-                  <label className="input-group">
-                    <span>Password</span>
-                    <input
-                      type="password"
-                      name="password"
-                      id="password"
-                      className="input input-bordered"
-                      required
-                    />
-                  </label>
-                </div>
-
-                <div className="form-control mt-5">
-                  <label className="input-group w-2/5">
-                    <span className="text-center">Confirm Password</span>
-                    <input
-                      type="password"
-                      name="confirmPassword"
-                      id="confirmPassword"
-                      className="input input-bordered"
-                      required
-                    />
-                  </label>
-                </div>
-
-                <div className="form-control mt-5">
-                  <label className="input-group">
-                    <span>User Name</span>
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      className="input input-bordered"
-                      required
-                    />
-                  </label>
-                </div>
-
-                <div className="form-control mt-5">
-                  <label className="input-group">
-                    <span>Profile Link</span>
-                    <input
-                      type="link"
-                      name="profile"
-                      id="profile"
-                      className="input input-bordered"
-                      required
-                    />
-                  </label>
-                </div>
-
-                <div className="flex">
-                  <div className="flex mx-auto">
-                    <input
-                      type="submit"
-                      value="Sign Up"
-                      className="btn rounded mt-7"
-                    ></input>
-                  </div>
-                </div>
-              </form>
-
-              <p className="text-center mt-2">
-                <small>
-                  Already have an account? Please{" "}
-                  <Link to="/login" className="text-primary">
-                    Login
-                  </Link>
-                </small>
-              </p>
-
-              {message && (
-                <div className="toast toast-end">
-                  <div className="alert alert-success">
-                    <div>
-                      <span>{message}</span>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {errorMessage && (
-                <div className="toast toast-end">
-                  <div className="alert alert-error">
-                    <div>
-                      <span>{errorMessage}</span>
-                    </div>
-                  </div>
-                </div>
-              )}
+              <input
+                type="text"
+                name="name"
+                id="name"
+                className="input input-bordered"
+                required
+              />
             </div>
 
-            <div>
-              <h1 className="text-center text-3xl font-semibold mt-10">Or</h1>
-              <h1 className="text-center text-xl font-semibold mt-2 mb-2">
-                Continue with
-              </h1>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Profile Url</span>
+              </label>
 
-              <div className="flex justify-center">
-                <button
-                  onClick={handleGoogleLogin}
-                  className="btn btn-ghost text-lg font-semibold"
-                >
-                  Google
-                </button>
+              <input
+                type="url"
+                name="url"
+                id="url"
+                className="input input-bordered"
+                required
+              />
+            </div>
 
-                <button
-                  onClick={handleGithubLogin}
-                  className="btn btn-ghost text-lg font-semibold"
-                >
-                  Github
-                </button>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Email</span>
+              </label>
+
+              <input
+                type="email"
+                name="email"
+                id="email"
+                className="input input-bordered"
+                required
+              />
+            </div>
+
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Password</span>
+              </label>
+
+              <input
+                type="password"
+                name="password"
+                id="password"
+                className="input input-bordered"
+                required
+              />
+            </div>
+
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Confirm Password</span>
+              </label>
+
+              <input
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
+                className="input input-bordered"
+                required
+              />
+            </div>
+
+            <div className="flex">
+              <div className="flex mx-auto">
+                <input
+                  type="submit"
+                  value="Sign Up"
+                  className="btn rounded mt-7"
+                ></input>
               </div>
             </div>
+          </form>
+
+          <p className="text-center mt-2">
+            <small>
+              Already have an account? Please{" "}
+              <Link to="/login" className="text-primary">
+                Login
+              </Link>
+            </small>
+          </p>
+
+          {message && (
+            <div className="toast toast-end">
+              <div className="alert alert-success">
+                <div>
+                  <span>{message}</span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {errorMessage && (
+            <div className="toast toast-end">
+              <div className="alert alert-error">
+                <div>
+                  <span>{errorMessage}</span>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        <div>
+          <h1 className="text-center text-3xl font-semibold mt-10">Or</h1>
+          <h1 className="text-center text-xl font-semibold mt-2 mb-2">
+            Continue with
+          </h1>
+
+          <div className="flex justify-center">
+            <button
+              onClick={handleGoogleLogin}
+              className="btn btn-ghost text-lg font-semibold"
+            >
+              Google
+            </button>
+
+            <button
+              onClick={handleGithubLogin}
+              className="btn btn-ghost text-lg font-semibold"
+            >
+              Github
+            </button>
           </div>
         </div>
       </div>
