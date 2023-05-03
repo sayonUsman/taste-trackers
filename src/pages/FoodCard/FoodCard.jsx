@@ -4,7 +4,7 @@ const FoodCard = ({ food }) => {
   return (
     <div className="card w-124 glass m-2 rounded-lg shadow-lg shadow-zinc-800">
       <figure>
-        <img src={food.strCategoryThumb} alt="Meal" />
+        <img src={food.strCategoryThumb} alt="Food" />
       </figure>
 
       <div className="card-body">

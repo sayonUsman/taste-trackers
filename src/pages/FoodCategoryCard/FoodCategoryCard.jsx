@@ -20,7 +20,7 @@ const FoodCategoryCard = ({ category }) => {
             </p>
 
             <button className="btn bg-white text-black hover:text-white">
-              View Details
+              View Items
             </button>
           </div>
         </div>
