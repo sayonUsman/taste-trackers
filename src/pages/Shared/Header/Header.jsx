@@ -17,7 +17,7 @@ const Header = () => {
               Want to Take Taste <br />
               Best Recipes
             </h1>
-            <p className="mb-5">Enjoy Every With Delicious Taste</p>
+            <p className="mb-5">Enjoy Every Day With Delicious Taste</p>
             <button className="btn rounded-md bg-white text-black hover:text-white">
               Get Started
             </button>
