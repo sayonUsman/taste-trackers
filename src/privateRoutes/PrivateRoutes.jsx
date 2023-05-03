@@ -1,17 +1,14 @@
 import React, { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../providers/ContextProvider";
+import LoaderPage from "../pages/LoaderPage/LoaderPage";
 
 const PrivateRoutes = ({ children }) => {
   const { user, isLoading } = useContext(AuthContext);
   const location = useLocation();
 
   if (isLoading) {
-    return (
-      <>
-        <h2 className="mt-48">Loading...</h2>
-      </>
-    );
+    return <LoaderPage></LoaderPage>;
   }
 
   if (user) {
