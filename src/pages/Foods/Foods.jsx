@@ -15,7 +15,7 @@ const Foods = () => {
       </div>
 
       <div>
-        <h1 className="text-center text-3xl md:text-5xl xl:text-7xl font-semibold mt-9 md:mt-12 lg:mt-16 mb-3 md:mb-7 lg:mb-9 xl:mb-12">
+        <h1 className="text-center text-2xl md:text-3xl xl:text-5xl font-semibold mt-12 md:mt-15 lg:mt-24 mb-3 md:mb-7 lg:mb-9 xl:mb-12">
           What You Want
         </h1>
 

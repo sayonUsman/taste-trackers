@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <div>
       <div>
-        <div className="bg-zinc-100 mt-5">
-          <footer className="container mx-auto footer p-10 text-base-content">
+        <div className="container mx-auto  rounded-md shadow-lg shadow-zinc-800 bg-zinc-100 mt-9 mb-5">
+          <footer className=" footer p-10 text-base-content">
             <div>
               <span className="footer-title">Services</span>
               <Link to="/" className="link link-hover">
