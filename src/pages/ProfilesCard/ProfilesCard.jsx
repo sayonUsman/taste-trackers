@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ProfilesCard = ({ profile }) => {
   return (
@@ -18,7 +19,9 @@ const ProfilesCard = ({ profile }) => {
             <div className="badge badge-primary">{profile.likes}</div>
           </button>
 
-          <button className="btn rounded">View Best Recipes</button>
+          <button className="btn rounded">
+            <Link to={`/bestRecipes/${profile.id}`}>View Best Recipes</Link>
+          </button>
         </div>
       </div>
     </div>

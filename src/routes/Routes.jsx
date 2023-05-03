@@ -5,6 +5,7 @@ import LoginPage from "../pages/LoginPage/LoginPage";
 import SignUpPage from "../pages/SignUpPage/SignUpPage";
 import Foods from "../pages/Foods/Foods";
 import FoodCategories from "../pages/FoodCategories/FoodCategories";
+import PrivateRoutes from "../privateRoutes/PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,14 @@ const router = createBrowserRouter([
       {
         path: "/signUp",
         element: <SignUpPage></SignUpPage>,
+      },
+      {
+        path: "/bestRecipes/:id",
+        element: (
+          <PrivateRoutes>
+            <div className="mt-48">Best Recipes</div>
+          </PrivateRoutes>
+        ),
       },
     ],
   },
