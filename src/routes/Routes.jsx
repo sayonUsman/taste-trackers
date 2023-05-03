@@ -7,6 +7,7 @@ import Foods from "../pages/Foods/Foods";
 import FoodCategories from "../pages/FoodCategories/FoodCategories";
 import PrivateRoutes from "../privateRoutes/PrivateRoutes";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Upcoming from "../pages/Shared/Upcoming/Upcoming";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
           },
         ],
       },
+      { path: "/about", element: <Upcoming></Upcoming> },
+      { path: "/contact", element: <Upcoming></Upcoming> },
+      { path: "/services", element: <Upcoming></Upcoming> },
+      { path: "/blogs", element: <Upcoming></Upcoming> },
       {
         path: "/login",
         element: <LoginPage></LoginPage>,
