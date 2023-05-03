@@ -13,9 +13,9 @@ const Header = () => {
         <div className="hero-overlay bg-opacity-50"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">
-              Want to Hire <br />
-              Our Great Chef
+            <h1 className="mb-3 text-3xl lg:text-5xl font-bold">
+              Want to Take Taste <br />
+              Best Recipes
             </h1>
             <p className="mb-5">Enjoy Every With Delicious Taste</p>
             <button className="btn rounded-md bg-white text-black hover:text-white">
