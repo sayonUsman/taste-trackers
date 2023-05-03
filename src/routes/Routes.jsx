@@ -6,6 +6,7 @@ import SignUpPage from "../pages/SignUpPage/SignUpPage";
 import Foods from "../pages/Foods/Foods";
 import FoodCategories from "../pages/FoodCategories/FoodCategories";
 import PrivateRoutes from "../privateRoutes/PrivateRoutes";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
             <div className="mt-48">Best Recipes</div>
           </PrivateRoutes>
         ),
+      },
+      {
+        path: "*",
+        element: <ErrorPage></ErrorPage>,
       },
     ],
   },
