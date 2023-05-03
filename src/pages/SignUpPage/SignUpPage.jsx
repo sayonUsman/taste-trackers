@@ -18,7 +18,7 @@ const SignUpPage = () => {
     const password = form.password.value;
     const confirmPassword = form.confirmPassword.value;
     const userName = form.name.value;
-    const profileLink = form.profile.value;
+    const profileLink = form.url.value;
     console.log(userName, profileLink);
 
     setMessage("");
@@ -76,9 +76,9 @@ const SignUpPage = () => {
   };
 
   return (
-    <div className="hero min-h-screen">
+    <div className="hero mt-24 lg:mt-0 min-h-screen">
       <div>
-        <div className="card rounded-lg w-96 bg-base-100 shadow-md shadow-zinc-800 p-5">
+        <div className="card rounded-none md:rounded-lg w-96 md:bg-base-100 md:shadow-md md:shadow-zinc-800 p-5">
           <h1 className="text-center text-2xl font-bold">Please Sign Up</h1>
 
           <form onSubmit={handleSubmit}>

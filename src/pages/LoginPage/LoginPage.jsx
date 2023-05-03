@@ -62,9 +62,9 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="hero min-h-screen">
-      <div>
-        <div className="card rounded-lg w-96 bg-base-100 shadow-md shadow-zinc-800 p-5">
+    <div className="hero mt-24 lg:mt-0 min-h-screen">
+      <div className="m-2">
+        <div className="card rounded-none md:rounded-lg w-96 md:bg-base-100 md:shadow-md md:shadow-zinc-800 p-5">
           <h1 className="text-center text-2xl font-bold">Please Login</h1>
 
           <form onSubmit={handleSubmit}>
