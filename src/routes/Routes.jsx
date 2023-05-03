@@ -14,7 +14,8 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/bestChefs"),
+        loader: () =>
+          fetch("https://taste-trackers-server.vercel.app/bestChefs"),
         children: [
           {
             path: "/",
@@ -25,7 +26,10 @@ const router = createBrowserRouter([
               {
                 path: "/",
                 element: <FoodCategories></FoodCategories>,
-                loader: () => fetch("http://localhost:5000/foodCategories"),
+                loader: () =>
+                  fetch(
+                    "https://taste-trackers-server.vercel.app/foodCategories"
+                  ),
               },
             ],
           },
