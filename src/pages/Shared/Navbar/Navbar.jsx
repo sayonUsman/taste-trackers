@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../../providers/ContextProvider";
 
 const Navbar = () => {
@@ -49,44 +49,50 @@ const Navbar = () => {
                   className="menu menu-compact dropdown-content mt-3 p-2 shadow-md shadow-zinc-800 bg-base-100 rounded-md w-52"
                 >
                   <li>
-                    <Link to="/" className="btn-ghost mb-1">
+                    <NavLink to="/" className="btn-ghost mb-1">
                       Home
-                    </Link>
+                    </NavLink>
                   </li>
 
                   <li>
-                    <Link to="/about" className="btn-ghost mb-1">
+                    <NavLink to="/about" className="btn-ghost mb-1">
                       About
-                    </Link>
+                    </NavLink>
                   </li>
 
                   <li>
-                    <Link to="/contact" className="btn-ghost mb-1">
+                    <NavLink to="/contact" className="btn-ghost mb-1">
                       Contact
-                    </Link>
+                    </NavLink>
                   </li>
 
                   <li>
-                    <Link to="/services" className="btn-ghost mb-1">
+                    <NavLink to="/services" className="btn-ghost mb-1">
                       Services
-                    </Link>
+                    </NavLink>
+                  </li>
+
+                  <li>
+                    <NavLink to="/blogs" className="btn-ghost mr-2">
+                      Blogs
+                    </NavLink>
                   </li>
 
                   {user ? (
                     <li>
-                      <Link
+                      <NavLink
                         to="/login"
                         onClick={handleLogOut}
                         className="btn-ghost"
                       >
                         Log Out
-                      </Link>
+                      </NavLink>
                     </li>
                   ) : (
                     <li>
-                      <Link to="/login" className="btn-ghost">
+                      <NavLink to="/login" className="btn-ghost">
                         Login
-                      </Link>
+                      </NavLink>
                     </li>
                   )}
                 </ul>
@@ -100,44 +106,50 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
               <ul className="menu menu-horizontal px-1">
                 <li>
-                  <Link to="/" className="btn-ghost mr-2">
+                  <NavLink to="/" className="btn-ghost mr-2">
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
 
                 <li>
-                  <Link to="/about" className="btn-ghost mr-2">
+                  <NavLink to="/about" className="btn-ghost mr-2">
                     About
-                  </Link>
+                  </NavLink>
                 </li>
 
                 <li>
-                  <Link to="/contact" className="btn-ghost mr-2">
+                  <NavLink to="/contact" className="btn-ghost mr-2">
                     Contact
-                  </Link>
+                  </NavLink>
                 </li>
 
                 <li>
-                  <Link to="/services" className="btn-ghost mr-2">
+                  <NavLink to="/services" className="btn-ghost mr-2">
                     Services
-                  </Link>
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/blogs" className="btn-ghost mr-2">
+                    Blogs
+                  </NavLink>
                 </li>
 
                 {user ? (
                   <li>
-                    <Link
+                    <NavLink
                       to="/login"
                       onClick={handleLogOut}
                       className="btn-ghost"
                     >
                       Log Out
-                    </Link>
+                    </NavLink>
                   </li>
                 ) : (
                   <li>
-                    <Link to="/login" className="btn-ghost">
+                    <NavLink to="/login" className="btn-ghost">
                       Login
-                    </Link>
+                    </NavLink>
                   </li>
                 )}
               </ul>
@@ -202,29 +214,29 @@ const Navbar = () => {
                     className="menu menu-compact dropdown-content mt-3 p-2 shadow-md shadow-zinc-800 bg-base-100 rounded-md w-52"
                   >
                     <li>
-                      <Link
+                      <NavLink
                         to="/profile"
                         className="justify-between btn-ghost mb-1"
                       >
                         Profile
                         <span className="badge">New</span>
-                      </Link>
+                      </NavLink>
                     </li>
 
                     <li>
-                      <Link to="/settings" className="btn-ghost mb-1">
+                      <NavLink to="/settings" className="btn-ghost mb-1">
                         Settings
-                      </Link>
+                      </NavLink>
                     </li>
 
                     <li>
-                      <Link
+                      <NavLink
                         to="/login"
                         onClick={handleLogOut}
                         className="btn-ghost"
                       >
                         Log Out
-                      </Link>
+                      </NavLink>
                     </li>
                   </ul>
                 </div>
