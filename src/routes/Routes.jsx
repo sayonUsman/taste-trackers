@@ -8,6 +8,7 @@ import FoodCategories from "../pages/FoodCategories/FoodCategories";
 import PrivateRoutes from "../privateRoutes/PrivateRoutes";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Upcoming from "../pages/Shared/Upcoming/Upcoming";
+import BestChef from "../pages/BestChef/BestChef";
 
 const router = createBrowserRouter([
   {
@@ -51,12 +52,16 @@ const router = createBrowserRouter([
         element: <SignUpPage></SignUpPage>,
       },
       {
-        path: "/bestRecipes/:id",
+        path: "/bestChef/:id",
         element: (
           <PrivateRoutes>
-            <div className="mt-48">Best Recipes</div>
+            <BestChef></BestChef>
           </PrivateRoutes>
         ),
+        loader: ({ params }) =>
+          fetch(
+            `https://taste-trackers-server.vercel.app/bestChef/${params.id}`
+          ),
       },
       {
         path: "*",

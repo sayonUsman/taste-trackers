@@ -20,7 +20,7 @@ const ProfilesCard = ({ chefProfile }) => {
           </button>
 
           <button className="btn rounded">
-            <Link to={`/bestRecipes/${chefProfile.id}`}>View Best Recipes</Link>
+            <Link to={`/bestChef/${chefProfile.id}`}>View Best Recipes</Link>
           </button>
         </div>
       </div>
