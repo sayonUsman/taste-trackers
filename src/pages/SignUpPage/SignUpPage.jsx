@@ -19,7 +19,6 @@ const SignUpPage = () => {
     const confirmPassword = form.confirmPassword.value;
     const userName = form.name.value;
     const profileLink = form.url.value;
-    console.log(userName, profileLink);
 
     setMessage("");
     setErrorMessage("");
