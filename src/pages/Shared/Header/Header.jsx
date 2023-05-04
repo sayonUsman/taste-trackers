@@ -11,7 +11,7 @@ const Header = () => {
         }}
       >
         <div className="hero-overlay bg-opacity-50"></div>
-        <div className="hero-content text-center text-neutral-content">
+        <div className="hero-content text-center text-neutral-content mt-24 lg:mt-0">
           <div className="max-w-md">
             <h1 className="mb-3 text-3xl lg:text-5xl font-bold">
               Want to Take Taste <br />
