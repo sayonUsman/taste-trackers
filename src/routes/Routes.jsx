@@ -9,6 +9,7 @@ import PrivateRoutes from "../privateRoutes/PrivateRoutes";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Upcoming from "../pages/Shared/Upcoming/Upcoming";
 import BestChef from "../pages/BestChef/BestChef";
+import Recipes from "../pages/Recipes/Recipes";
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,14 @@ const router = createBrowserRouter([
           fetch(
             `https://taste-trackers-server.vercel.app/bestChef/${params.id}`
           ),
+        children: [
+          {
+            path: "/bestChef/:id",
+            element: <Recipes></Recipes>,
+            loader: () =>
+              fetch("https://www.themealdb.com/api/json/v1/1/search.php?s="),
+          },
+        ],
       },
       {
         path: "*",
