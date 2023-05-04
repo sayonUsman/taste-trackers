@@ -1,14 +1,14 @@
 import React from "react";
 
-const FoodCard = ({ food }) => {
+const MealCard = ({ meal }) => {
   return (
     <div className="card w-124 glass m-2 rounded-lg shadow-lg shadow-zinc-800">
       <figure>
-        <img src={food.strCategoryThumb} alt="Food" />
+        <img src={meal.strCategoryThumb} alt="Meal Image" />
       </figure>
 
       <div className="card-body">
-        <h2 className="card-title">{food.strCategory}</h2>
+        <h2 className="card-title">{meal.strCategory}</h2>
 
         <div className="card-actions justify-end">
           <button className="btn rounded">Order Now</button>
@@ -18,4 +18,4 @@ const FoodCard = ({ food }) => {
   );
 };
 
-export default FoodCard;
+export default MealCard;

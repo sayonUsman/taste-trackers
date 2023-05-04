@@ -3,8 +3,8 @@ import Main from "../Layouts/Main";
 import Home from "../pages/Home/Home";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import SignUpPage from "../pages/SignUpPage/SignUpPage";
-import Foods from "../pages/Foods/Foods";
-import FoodCategories from "../pages/FoodCategories/FoodCategories";
+import Meals from "../pages/Meals/Meals";
+import MealCategories from "../pages/MealCategories/MealCategories";
 import PrivateRoutes from "../privateRoutes/PrivateRoutes";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Upcoming from "../pages/Shared/Upcoming/Upcoming";
@@ -24,13 +24,13 @@ const router = createBrowserRouter([
         children: [
           {
             path: "/",
-            element: <Foods></Foods>,
+            element: <Meals></Meals>,
             loader: () =>
               fetch("https://www.themealdb.com/api/json/v1/1/categories.php"),
             children: [
               {
                 path: "/",
-                element: <FoodCategories></FoodCategories>,
+                element: <MealCategories></MealCategories>,
                 loader: () =>
                   fetch(
                     "https://taste-trackers-server.vercel.app/foodCategories"

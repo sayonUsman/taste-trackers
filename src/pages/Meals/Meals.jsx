@@ -1,16 +1,16 @@
 import React from "react";
 import { Outlet, useLoaderData } from "react-router-dom";
-import FoodCard from "../FoodCard/FoodCard";
+import MealCard from "../MealCard/MealCard";
 
-const Foods = () => {
-  let data = useLoaderData();
-  data = data.categories;
+const Meals = () => {
+  let meals = useLoaderData();
+  meals = meals.categories;
 
   return (
     <div className="container mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {data.slice(3, 12).map((food) => (
-          <FoodCard key={food.idCategory} food={food}></FoodCard>
+        {meals.slice(3, 12).map((meal) => (
+          <MealCard key={meal.idCategory} meal={meal}></MealCard>
         ))}
       </div>
 
@@ -25,4 +25,4 @@ const Foods = () => {
   );
 };
 
-export default Foods;
+export default Meals;

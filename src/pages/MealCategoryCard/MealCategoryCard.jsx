@@ -1,6 +1,6 @@
 import React from "react";
 
-const FoodCategoryCard = ({ category }) => {
+const MealCategoryCard = ({ category }) => {
   return (
     <div
       className="hero h-50"
@@ -29,4 +29,4 @@ const FoodCategoryCard = ({ category }) => {
   );
 };
 
-export default FoodCategoryCard;
+export default MealCategoryCard;
