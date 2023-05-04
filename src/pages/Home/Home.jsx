@@ -18,8 +18,11 @@ const Home = () => {
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {bestChefs.map((profile) => (
-              <ProfilesCard key={profile.id} profile={profile}></ProfilesCard>
+            {bestChefs.map((chefProfile) => (
+              <ProfilesCard
+                key={chefProfile.id}
+                chefProfile={chefProfile}
+              ></ProfilesCard>
             ))}
           </div>
         </div>
