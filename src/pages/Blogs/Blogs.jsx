@@ -2,7 +2,7 @@ import React from "react";
 
 const Blogs = () => {
   return (
-    <div className="container mx-auto mt-24">
+    <div className="container mx-auto mt-24 p-2">
       <p className="text-md font-semibold">
         * What is the differences between uncontrolled and controlled
         components?
