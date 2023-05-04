@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 const RecipeCard = ({ recipe }) => {
   const instructions = recipe.strInstructions;
+  let [isFavourite, setIsFavourite] = useState(false);
+
+  const favourite = () => {
+    isFavourite = !isFavourite;
+    setIsFavourite(isFavourite);
+  };
 
   return (
     <div className="card m-2 rounded-lg shadow-lg shadow-zinc-800">
@@ -29,9 +35,27 @@ const RecipeCard = ({ recipe }) => {
         </p>
 
         <div className="card-actions justify-end">
-          <button className="btn rounded-md btn-primary">Favourite</button>
+          <button
+            onClick={favourite}
+            disabled={isFavourite}
+            className="btn rounded-md btn-primary"
+          >
+            Favourite
+          </button>
         </div>
       </div>
+
+      {isFavourite && (
+        <div className="toast toast-end z-10">
+          <div className="alert alert-success">
+            <div>
+              <span>
+                The {recipe.strMeal} recipe is added as a your favorite meal.
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
