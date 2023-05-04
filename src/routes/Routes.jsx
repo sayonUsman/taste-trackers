@@ -10,6 +10,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Upcoming from "../pages/Shared/Upcoming/Upcoming";
 import BestChef from "../pages/BestChef/BestChef";
 import Recipes from "../pages/Recipes/Recipes";
+import Blogs from "../pages/Blogs/Blogs";
 
 const router = createBrowserRouter([
   {
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
                 element: <MealCategories></MealCategories>,
                 loader: () =>
                   fetch(
-                    "https://taste-trackers-server.vercel.app/foodCategories"
+                    "https://taste-trackers-server.vercel.app/mealCategories"
                   ),
               },
             ],
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
       { path: "/about", element: <Upcoming></Upcoming> },
       { path: "/contact", element: <Upcoming></Upcoming> },
       { path: "/services", element: <Upcoming></Upcoming> },
-      { path: "/blogs", element: <Upcoming></Upcoming> },
+      { path: "/blogs", element: <Blogs></Blogs> },
       {
         path: "/login",
         element: <LoginPage></LoginPage>,
