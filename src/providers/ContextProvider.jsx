@@ -31,6 +31,20 @@ const ContextProvider = ({ children }) => {
     };
   }, []);
 
+  const loggedInUser = () => {
+    const user = auth.currentUser;
+
+    if (user !== null) {
+      const displayName = user.displayName;
+      const email = user.email;
+      const photoURL = user.photoURL;
+
+      return [displayName, email, photoURL];
+    }
+
+    return [];
+  };
+
   const createNewUser = (email, password) => {
     setIsLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
@@ -58,6 +72,7 @@ const ContextProvider = ({ children }) => {
   const authContext = {
     user,
     isLoading,
+    loggedInUser,
     createNewUser,
     loginWithEmailAndPassword,
     logOut,

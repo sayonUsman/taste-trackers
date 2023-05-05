@@ -3,9 +3,10 @@ import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../../providers/ContextProvider";
 
 const Navbar = () => {
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOut, loggedInUser } = useContext(AuthContext);
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const userDetails = loggedInUser();
 
   const handleLogOut = () => {
     setMessage("");
@@ -19,7 +20,7 @@ const Navbar = () => {
         setErrorMessage(error.message);
       });
   };
-
+  console.log(userDetails);
   return (
     <div>
       <div className="relative z-10">
@@ -203,7 +204,9 @@ const Navbar = () => {
                     <div className="w-10 rounded-full">
                       <img
                         src={
-                          "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80"
+                          userDetails[2]
+                            ? userDetails[2]
+                            : "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80} "
                         }
                       />
                     </div>
@@ -216,10 +219,9 @@ const Navbar = () => {
                     <li>
                       <NavLink
                         to="/profile"
-                        className="justify-between btn-ghost mb-1"
+                        className="justify-between btn-ghost mb-1 pr-1"
                       >
-                        Profile
-                        <span className="badge">New</span>
+                        {userDetails[0] ? userDetails[0] : userDetails[1]}
                       </NavLink>
                     </li>
 
