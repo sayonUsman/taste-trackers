@@ -20,7 +20,7 @@ const Navbar = () => {
         setErrorMessage(error.message);
       });
   };
-  console.log(userDetails);
+
   return (
     <div>
       <div className="relative z-10">
