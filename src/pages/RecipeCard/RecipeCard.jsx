@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaStar } from "react-icons/fa";
 
 const RecipeCard = ({ recipe }) => {
   const instructions = recipe.strInstructions;
@@ -21,6 +22,16 @@ const RecipeCard = ({ recipe }) => {
 
       <div className="card-body">
         <h2 className="card-title">Recipe Name: {recipe.strMeal}</h2>
+
+        <span className="card-title">
+          Rating :
+          <FaStar color={"rgb(251 191 36)"} />
+          <FaStar color={"rgb(251 191 36)"} />
+          <FaStar color={"rgb(251 191 36)"} />
+          <FaStar color={"rgb(251 191 36)"} />
+          <FaStar color={"rgb(163 163 163)"} />
+        </span>
+
         <h2 className="card-title">Ingredients</h2>
         <p className="font-semibold">1. {recipe.strIngredient1}</p>
         <p className="font-semibold">2. {recipe.strIngredient2}</p>
