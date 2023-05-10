@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const RecipeCard = ({ recipe }) => {
   const instructions = recipe.strInstructions;
@@ -7,7 +9,22 @@ const RecipeCard = ({ recipe }) => {
 
   const favourite = () => {
     isFavourite = !isFavourite;
+
     setIsFavourite(isFavourite);
+
+    toast.success(
+      `The ${recipe.strMeal} recipe is added as a your favorite meal.`,
+      {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      }
+    );
   };
 
   return (
@@ -57,15 +74,18 @@ const RecipeCard = ({ recipe }) => {
       </div>
 
       {isFavourite && (
-        <div className="toast toast-end z-10">
-          <div className="alert alert-success">
-            <div>
-              <span>
-                The {recipe.strMeal} recipe is added as a your favorite meal.
-              </span>
-            </div>
-          </div>
-        </div>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
       )}
     </div>
   );
