@@ -10,7 +10,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Upcoming from "../pages/Shared/Upcoming/Upcoming";
 import BestChef from "../pages/BestChef/BestChef";
 import Recipes from "../pages/Recipes/Recipes";
-import Blogs from "../pages/Blogs/Blogs";
+import Blog from "../pages/Blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
       { path: "/about", element: <Upcoming></Upcoming> },
       { path: "/contact", element: <Upcoming></Upcoming> },
       { path: "/services", element: <Upcoming></Upcoming> },
-      { path: "/blogs", element: <Blogs></Blogs> },
+      { path: "/blog", element: <Blog></Blog> },
       {
         path: "/login",
         element: <LoginPage></LoginPage>,

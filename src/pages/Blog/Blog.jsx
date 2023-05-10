@@ -1,6 +1,6 @@
 import React from "react";
 
-const Blogs = () => {
+const Blog = () => {
   return (
     <div className="container mx-auto mt-24 p-2">
       <p className="text-md font-semibold">
@@ -90,4 +90,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default Blog;

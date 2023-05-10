@@ -74,8 +74,8 @@ const Navbar = () => {
                   </li>
 
                   <li>
-                    <NavLink to="/blogs" className="btn-ghost mr-2">
-                      Blogs
+                    <NavLink to="/blog" className="btn-ghost mr-2">
+                      Blog
                     </NavLink>
                   </li>
 
@@ -131,8 +131,8 @@ const Navbar = () => {
                 </li>
 
                 <li>
-                  <NavLink to="/blogs" className="btn-ghost mr-2">
-                    Blogs
+                  <NavLink to="/blog" className="btn-ghost mr-2">
+                    Blog
                   </NavLink>
                 </li>
 
