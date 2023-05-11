@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/ContextProvider";
+import useSetTitle from "../../hooks/useSetTitle";
 
 const LoginPage = () => {
   const { loginWithEmailAndPassword, loginWithGoogle, loginWithGithub } =
@@ -11,6 +12,8 @@ const LoginPage = () => {
 
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+
+  useSetTitle("Login");
 
   const handleSubmit = (event) => {
     event.preventDefault();

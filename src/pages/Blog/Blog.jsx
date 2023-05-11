@@ -1,6 +1,9 @@
 import React from "react";
+import useSetTitle from "../../hooks/useSetTitle";
 
 const Blog = () => {
+  useSetTitle("Blog");
+
   return (
     <div className="container mx-auto mt-24 p-2">
       <p className="text-md font-semibold">

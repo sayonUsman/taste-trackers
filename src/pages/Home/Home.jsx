@@ -3,9 +3,11 @@ import Header from "../Shared/Header/Header";
 import Footer from "../Shared/Footer/Footer";
 import ProfilesCard from "../ProfilesCard/ProfilesCard";
 import { Outlet, useLoaderData } from "react-router-dom";
+import useSetTitle from "../../hooks/useSetTitle";
 
 const Home = () => {
   const bestChefs = useLoaderData();
+  useSetTitle("Home");
 
   return (
     <div>
