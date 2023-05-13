@@ -1,5 +1,3 @@
-import React from "react";
-
 const MealCategoryCard = ({ category }) => {
   return (
     <div

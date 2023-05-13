@@ -1,6 +1,5 @@
-import React from "react";
 import { Outlet, useLoaderData } from "react-router-dom";
-import Footer from "../Shared/Footer/Footer";
+import Footer from "../../../SharedPage/Footer/Footer";
 
 const BestChef = () => {
   const bestChef = useLoaderData();

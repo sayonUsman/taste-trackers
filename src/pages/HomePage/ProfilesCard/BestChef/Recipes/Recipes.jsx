@@ -1,7 +1,6 @@
-import React from "react";
 import { useLoaderData } from "react-router-dom";
-import RecipeCard from "../RecipeCard/RecipeCard";
-import useSetTitle from "../../hooks/useSetTitle";
+import RecipeCard from "./RecipeCard/RecipeCard";
+import useSetTitle from "../../../../../hooks/useSetTitle";
 
 const Recipes = () => {
   const recipes = useLoaderData();

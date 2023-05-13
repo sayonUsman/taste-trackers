@@ -1,6 +1,5 @@
-import React from "react";
 import { useLoaderData } from "react-router-dom";
-import MealCategoryCard from "../MealCategoryCard/MealCategoryCard";
+import MealCategoryCard from "./MealCategoryCard/MealCategoryCard";
 
 const MealCategories = () => {
   const categories = useLoaderData();

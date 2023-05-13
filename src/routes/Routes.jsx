@@ -1,16 +1,16 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layouts/Main";
-import Home from "../pages/Home/Home";
+import Home from "../pages/HomePage/HomePage";
+import Meals from "../pages/HomePage/Meals/Meals";
+import MealCategories from "../pages/HomePage/MealCategories/MealCategories";
+import Upcoming from "../pages/SharedPage/Upcoming/Upcoming";
+import Blog from "../pages/Blog/Blog";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import SignUpPage from "../pages/SignUpPage/SignUpPage";
-import Meals from "../pages/Meals/Meals";
-import MealCategories from "../pages/MealCategories/MealCategories";
 import PrivateRoutes from "../privateRoutes/PrivateRoutes";
+import BestChef from "../pages/HomePage/ProfilesCard/BestChef/BestChef";
+import Recipes from "../pages/HomePage/ProfilesCard/BestChef/Recipes/Recipes";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
-import Upcoming from "../pages/Shared/Upcoming/Upcoming";
-import BestChef from "../pages/BestChef/BestChef";
-import Recipes from "../pages/Recipes/Recipes";
-import Blog from "../pages/Blog/Blog";
 
 const router = createBrowserRouter([
   {

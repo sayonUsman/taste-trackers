@@ -1,4 +1,3 @@
-import React from "react";
 import header_image from "../../../assets/header_image.jpg";
 
 const Header = () => {

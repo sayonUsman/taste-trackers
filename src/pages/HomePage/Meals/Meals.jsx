@@ -1,6 +1,5 @@
-import React from "react";
 import { Outlet, useLoaderData } from "react-router-dom";
-import MealCard from "../MealCard/MealCard";
+import MealCard from "./MealCard/MealCard";
 
 const Meals = () => {
   let meals = useLoaderData();

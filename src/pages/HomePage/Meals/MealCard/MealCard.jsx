@@ -1,5 +1,3 @@
-import React from "react";
-
 const MealCard = ({ meal }) => {
   return (
     <div className="card w-124 glass m-2 rounded-lg shadow-lg shadow-zinc-800">
