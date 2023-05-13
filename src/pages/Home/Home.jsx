@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../Shared/Header/Header";
+import Header from "./Header/Header";
 import Footer from "../Shared/Footer/Footer";
 import ProfilesCard from "../ProfilesCard/ProfilesCard";
 import { Outlet, useLoaderData } from "react-router-dom";
