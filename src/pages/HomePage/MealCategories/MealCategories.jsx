@@ -9,7 +9,7 @@ const MealCategories = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-2">
         {categories.map((category) => (
           <MealCategoryCard
-            key={category.id}
+            key={category._id}
             category={category}
           ></MealCategoryCard>
         ))}

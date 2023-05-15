@@ -20,8 +20,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () =>
-          fetch("https://taste-trackers-server.vercel.app/bestChefs"),
+        loader: () => fetch("https://taste-trackers.vercel.app/bestChefs"),
         children: [
           {
             path: "/",
@@ -33,9 +32,7 @@ const router = createBrowserRouter([
                 path: "/",
                 element: <MealCategories></MealCategories>,
                 loader: () =>
-                  fetch(
-                    "https://taste-trackers-server.vercel.app/mealCategories"
-                  ),
+                  fetch("https://taste-trackers.vercel.app/mealCategories"),
               },
             ],
           },
@@ -61,9 +58,14 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://taste-trackers-server.vercel.app/bestChef/${params.id}`
-          ),
+          fetch(`https://taste-trackers.vercel.app/bestChef/${params.id}`, {
+            method: "GET",
+            headers: {
+              authorization: `Bearer ${localStorage.getItem(
+                "taste-trackers-access-token"
+              )}`,
+            },
+          }),
         children: [
           {
             path: "/bestChef/:id",

@@ -24,6 +24,25 @@ const ContextProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setIsLoading(false);
+
+      if (currentUser) {
+        const loggedInUser = {
+          name: currentUser.displayName,
+          email: currentUser.email,
+        };
+
+        fetch("https://taste-trackers.vercel.app/access-token", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(loggedInUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            localStorage.setItem("taste-trackers-access-token", data.token);
+          });
+      } else {
+        localStorage.removeItem("taste-trackers-access-token");
+      }
     });
 
     return () => {
