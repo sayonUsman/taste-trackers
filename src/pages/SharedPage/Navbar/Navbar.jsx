@@ -21,6 +21,54 @@ const Navbar = () => {
       });
   };
 
+  const navbarContent = (
+    <>
+      <li>
+        <NavLink to="/" className="btn-ghost mb-1 lg:mb-0 lg:mr-2">
+          Home
+        </NavLink>
+      </li>
+
+      <li>
+        <NavLink to="/about" className="btn-ghost mb-1 lg:mb-0 lg:mr-2">
+          About
+        </NavLink>
+      </li>
+
+      <li>
+        <NavLink to="/contact" className="btn-ghost mb-1 lg:mb-0 lg:mr-2">
+          Contact
+        </NavLink>
+      </li>
+
+      <li>
+        <NavLink to="/services" className="btn-ghost mb-1 lg:mb-0 lg:mr-2">
+          Services
+        </NavLink>
+      </li>
+
+      <li>
+        <NavLink to="/blog" className="btn-ghost mb-1 lg:mb-0 lg:mr-2">
+          Blog
+        </NavLink>
+      </li>
+
+      {user ? (
+        <li>
+          <NavLink to="/login" onClick={handleLogOut} className="btn-ghost">
+            Log Out
+          </NavLink>
+        </li>
+      ) : (
+        <li>
+          <NavLink to="/login" className="btn-ghost">
+            Login
+          </NavLink>
+        </li>
+      )}
+    </>
+  );
+
   return (
     <div>
       <div className="relative z-10">
@@ -49,53 +97,7 @@ const Navbar = () => {
                   tabIndex={0}
                   className="menu menu-compact dropdown-content mt-3 p-2 shadow-md shadow-zinc-800 bg-base-100 rounded-md w-52"
                 >
-                  <li>
-                    <NavLink to="/" className="btn-ghost mb-1">
-                      Home
-                    </NavLink>
-                  </li>
-
-                  <li>
-                    <NavLink to="/about" className="btn-ghost mb-1">
-                      About
-                    </NavLink>
-                  </li>
-
-                  <li>
-                    <NavLink to="/contact" className="btn-ghost mb-1">
-                      Contact
-                    </NavLink>
-                  </li>
-
-                  <li>
-                    <NavLink to="/services" className="btn-ghost mb-1">
-                      Services
-                    </NavLink>
-                  </li>
-
-                  <li>
-                    <NavLink to="/blog" className="btn-ghost mr-2">
-                      Blog
-                    </NavLink>
-                  </li>
-
-                  {user ? (
-                    <li>
-                      <NavLink
-                        to="/login"
-                        onClick={handleLogOut}
-                        className="btn-ghost"
-                      >
-                        Log Out
-                      </NavLink>
-                    </li>
-                  ) : (
-                    <li>
-                      <NavLink to="/login" className="btn-ghost">
-                        Login
-                      </NavLink>
-                    </li>
-                  )}
+                  {navbarContent}
                 </ul>
               </div>
 
@@ -105,55 +107,7 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-center hidden lg:flex">
-              <ul className="menu menu-horizontal px-1">
-                <li>
-                  <NavLink to="/" className="btn-ghost mr-2">
-                    Home
-                  </NavLink>
-                </li>
-
-                <li>
-                  <NavLink to="/about" className="btn-ghost mr-2">
-                    About
-                  </NavLink>
-                </li>
-
-                <li>
-                  <NavLink to="/contact" className="btn-ghost mr-2">
-                    Contact
-                  </NavLink>
-                </li>
-
-                <li>
-                  <NavLink to="/services" className="btn-ghost mr-2">
-                    Services
-                  </NavLink>
-                </li>
-
-                <li>
-                  <NavLink to="/blog" className="btn-ghost mr-2">
-                    Blog
-                  </NavLink>
-                </li>
-
-                {user ? (
-                  <li>
-                    <NavLink
-                      to="/login"
-                      onClick={handleLogOut}
-                      className="btn-ghost"
-                    >
-                      Log Out
-                    </NavLink>
-                  </li>
-                ) : (
-                  <li>
-                    <NavLink to="/login" className="btn-ghost">
-                      Login
-                    </NavLink>
-                  </li>
-                )}
-              </ul>
+              <ul className="menu menu-horizontal px-1">{navbarContent}</ul>
             </div>
 
             <div className="navbar-end">
