@@ -8,7 +8,7 @@ const MealCategoryCard = ({ category }) => {
     >
       <div className="hero-overlay bg-opacity-50">
         <div className="hero-content text-center text-neutral-content">
-          <div className="max-w-md">
+          <div className="max-w-md text-white">
             <h1 className="mb-5 text-5xl font-bold">{category.category}</h1>
 
             <p className="mb-5">
@@ -17,9 +17,7 @@ const MealCategoryCard = ({ category }) => {
               et a id nisi.
             </p>
 
-            <button className="btn bg-white text-black hover:text-white">
-              View Items
-            </button>
+            <button className="btn text-white">View Items</button>
           </div>
         </div>
       </div>

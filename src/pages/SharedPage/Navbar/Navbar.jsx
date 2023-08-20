@@ -29,30 +29,6 @@ const Navbar = () => {
         </NavLink>
       </li>
 
-      <li>
-        <NavLink to="/about" className="btn-ghost mb-1 lg:mb-0 lg:mr-2">
-          About
-        </NavLink>
-      </li>
-
-      <li>
-        <NavLink to="/contact" className="btn-ghost mb-1 lg:mb-0 lg:mr-2">
-          Contact
-        </NavLink>
-      </li>
-
-      <li>
-        <NavLink to="/services" className="btn-ghost mb-1 lg:mb-0 lg:mr-2">
-          Services
-        </NavLink>
-      </li>
-
-      <li>
-        <NavLink to="/blog" className="btn-ghost mb-1 lg:mb-0 lg:mr-2">
-          Blog
-        </NavLink>
-      </li>
-
       {user ? (
         <li>
           <NavLink to="/login" onClick={handleLogOut} className="btn-ghost">
@@ -72,8 +48,8 @@ const Navbar = () => {
   return (
     <div>
       <div className="relative z-10">
-        <div className="fixed top-0 left-0 right-0 bg-white">
-          <div className="container mx-auto rounded-md navbar shadow-lg shadow-zinc-800 mb-5">
+        <div className="fixed top-0 left-0 right-0 bg-[#2a303c]">
+          <div className="container mx-auto rounded-md navbar mb-5">
             <div className="navbar-start">
               <div className="dropdown">
                 <label tabIndex={0} className="btn btn-ghost lg:hidden">

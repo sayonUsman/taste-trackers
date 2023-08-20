@@ -6,11 +6,11 @@ const BestChef = () => {
 
   return (
     <div>
-      <div className="container mx-auto mt-24">
-        <div className="card rounded-lg md:card-side md:shadow-lg md:shadow-zinc-800 max-w-3xl mx-auto">
+      <div className="container mx-auto pt-24">
+        <div className="card glass rounded-lg md:card-side max-w-3xl mx-auto">
           <figure>
             <img
-              className="h-96 rounded-lg"
+              className="h-96 rounded-l-lg"
               src={bestChef.image}
               alt="Profile Image"
             />
@@ -27,7 +27,7 @@ const BestChef = () => {
             </p>
 
             <div className="card-actions justify-end">
-              <button className="btn rounded-md pl-7 pr-7 btn-primary">
+              <button className="btn rounded-md text-white pl-7 pr-7">
                 Like
               </button>
             </div>

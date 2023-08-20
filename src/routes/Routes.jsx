@@ -3,8 +3,6 @@ import Main from "../Layouts/Main";
 import Home from "../pages/HomePage/HomePage";
 import Meals from "../pages/HomePage/Meals/Meals";
 import MealCategories from "../pages/HomePage/MealCategories/MealCategories";
-import Upcoming from "../pages/SharedPage/Upcoming/Upcoming";
-import Blog from "../pages/Blog/Blog";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import SignUpPage from "../pages/SignUpPage/SignUpPage";
 import PrivateRoutes from "../privateRoutes/PrivateRoutes";
@@ -38,10 +36,6 @@ const router = createBrowserRouter([
           },
         ],
       },
-      { path: "/about", element: <Upcoming></Upcoming> },
-      { path: "/contact", element: <Upcoming></Upcoming> },
-      { path: "/services", element: <Upcoming></Upcoming> },
-      { path: "/blog", element: <Blog></Blog> },
       {
         path: "/login",
         element: <LoginPage></LoginPage>,

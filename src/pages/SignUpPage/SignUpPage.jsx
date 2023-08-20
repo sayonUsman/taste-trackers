@@ -52,7 +52,7 @@ const SignUpPage = () => {
 
     loginWithGoogle()
       .then(() => {
-        setMessage("Successfully signed in");
+        setMessage("Successfully signed up");
         navigate("/");
       })
       .catch((error) => {
@@ -66,7 +66,7 @@ const SignUpPage = () => {
 
     loginWithGithub()
       .then(() => {
-        setMessage("Successfully signed in");
+        setMessage("Successfully signed up");
         navigate("/");
       })
       .catch((error) => {
@@ -77,7 +77,7 @@ const SignUpPage = () => {
   return (
     <div className="hero mt-24 lg:mt-0 min-h-screen">
       <div>
-        <div className="card rounded-none md:rounded-lg w-96 md:bg-base-100 md:shadow-md md:shadow-zinc-800 p-5">
+        <div className="card glass rounded-none md:rounded-lg w-96 p-5">
           <h1 className="text-center text-2xl font-bold">Please Sign Up</h1>
 
           <form onSubmit={handleSubmit}>
@@ -165,31 +165,11 @@ const SignUpPage = () => {
           <p className="text-center mt-2">
             <small>
               Already have an account? Please{" "}
-              <Link to="/login" className="text-primary">
+              <Link to="/login" className="link-hover">
                 Login
               </Link>
             </small>
           </p>
-
-          {message && (
-            <div className="toast toast-end">
-              <div className="alert alert-success">
-                <div>
-                  <span>{message}</span>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {errorMessage && (
-            <div className="toast toast-end">
-              <div className="alert alert-error">
-                <div>
-                  <span>{errorMessage}</span>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
 
         <div>
@@ -215,6 +195,26 @@ const SignUpPage = () => {
           </div>
         </div>
       </div>
+
+      {message && (
+        <div className="toast toast-end">
+          <div className="alert alert-success">
+            <div>
+              <span>{message}</span>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {errorMessage && (
+        <div className="toast toast-end">
+          <div className="alert alert-error">
+            <div>
+              <span>{errorMessage}</span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

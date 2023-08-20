@@ -11,15 +11,13 @@ const Header = () => {
       >
         <div className="hero-overlay bg-opacity-50"></div>
         <div className="hero-content text-center text-neutral-content mt-24 lg:mt-0">
-          <div className="max-w-md">
+          <div className="max-w-md text-white">
             <h1 className="mb-3 text-3xl lg:text-5xl font-bold">
               Want to Take Taste <br />
               Best Recipes
             </h1>
             <p className="mb-5">Enjoy Every Day With Delicious Taste</p>
-            <button className="btn rounded-md bg-white text-black hover:text-white">
-              Get Started
-            </button>
+            <button className="btn rounded-md text-white">Get Started</button>
           </div>
         </div>
       </div>

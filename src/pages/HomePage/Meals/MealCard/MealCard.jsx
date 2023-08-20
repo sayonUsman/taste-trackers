@@ -1,6 +1,6 @@
 const MealCard = ({ meal }) => {
   return (
-    <div className="card w-124 glass m-2 rounded-lg shadow-lg shadow-zinc-800">
+    <div className="card w-124 glass m-2 rounded-lg">
       <figure>
         <img src={meal.strCategoryThumb} alt="Meal Image" />
       </figure>
@@ -9,7 +9,7 @@ const MealCard = ({ meal }) => {
         <h2 className="card-title">{meal.strCategory}</h2>
 
         <div className="card-actions justify-end">
-          <button className="btn rounded">Order Now</button>
+          <button className="btn rounded text-white">Order Now</button>
         </div>
       </div>
     </div>

@@ -28,7 +28,7 @@ const RecipeCard = ({ recipe }) => {
   };
 
   return (
-    <div className="card m-2 rounded-lg shadow-lg shadow-zinc-800">
+    <div className="card glass m-2 rounded-lg">
       <figure>
         <img
           className="md:h-full"
@@ -66,7 +66,7 @@ const RecipeCard = ({ recipe }) => {
           <button
             onClick={favourite}
             disabled={isFavourite}
-            className="btn rounded-md btn-primary"
+            className="btn rounded-md text-white"
           >
             Favourite
           </button>
